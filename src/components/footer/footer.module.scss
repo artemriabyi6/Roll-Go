@@ -1,0 +1,82 @@
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    .container {
+        .firstRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.597);
+            .logoBlock {
+                width: 150px;
+                img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+            .locationBlock {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .iconBlock{
+                    width: 50px;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+            .contactBlock {
+                position: relative;
+                top: 5px;
+                .firstRow {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    padding: 0px;
+                    border-bottom: inherit;
+                    .iconBlock {
+                        width: 50px;
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+                .secondRowText {
+                    text-align: center;
+                    color: white;
+                    position: relative;
+                    left: 10px;
+                }
+            }
+            .socialMedia {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                .iconBlock {
+                    width: 50px;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+        .secondRow {
+           
+            color: white;
+            .firstRow {
+                padding: 10px 0;
+                gap: 20px;
+                justify-content: center;
+                border-bottom: inherit;
+                opacity: 0.5;
+            }
+            .secondRow {
+                color: inherit;
+                text-align: center;
+                opacity: 0.5;
+            }
+        }
+    }
+   
+}

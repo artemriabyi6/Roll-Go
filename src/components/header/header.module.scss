@@ -1,0 +1,119 @@
+.header {
+  width: 100%;
+  background-color: #fff; // Можна додати для видимості
+  margin-bottom: 30px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+  }
+
+  .logoBlock {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .otherBlock {
+    display: flex;
+    align-items: center;
+    .navigation {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          font-size: 20px;
+          font-weight: 500;
+          margin-right: 20px;
+          .menuItem {
+            color: #53132c;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            &:hover {
+                color: #832c4ce1;
+            }
+          }
+          .specialItem {
+            background: #53132c;
+            color: #fff;
+            padding: 0.2em 0.7em;
+            border-radius: 2em 0 2em 2em;
+            transition: 0.3s ease-in-out;
+            &:hover {
+            color: #fff;
+            background: #832c4ce1;
+
+            }
+          }
+        }
+      }
+    }
+    .adressBlock {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0px 60px 0px 60px;
+      .adressBlockFirstRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+        .adressBlockFirstRowIconBox {
+          width: 30px;
+          height: 30px;
+        }
+        .adressBlockFirstRowText {
+          font-weight: 700;
+          font-size: 22px;
+          color: #53132c;
+        }
+      }
+      .adressBlockSecondRowText {
+        font-size: 14px;
+        position: relative;
+        left: 5px;
+        
+      }
+    }
+    .contactBlock {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .contactBlockFirstRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+       
+        .contactBlockFirstRowIconBox {
+          width: 40px;
+          height: 40px;
+        }
+        .contactBlockFirstRowText {
+          font-weight: 700;
+          font-size: 22px;
+          color: #53132c;
+        }
+      }
+      .contactBlockSecondRowText {
+        font-size: 14px;
+        position: relative;
+        left: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
