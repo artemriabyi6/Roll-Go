@@ -239,8 +239,9 @@ import Footer from '../../components/footer/Footer';
 import MainSlider from '../../components/mainSlider/MainSlider';
 import SubHeader from "../../components/subHeader/SubHeader";
 import ProductsSection from "../../components/productsSection/ProductsSection";
-import { data, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { images } from "../../utils/images";
+import About from "../../components/about/About";
 
 const rolls = [
     {   
@@ -252,7 +253,7 @@ const rolls = [
         id:1
     },
     {   
-        img: images.slide3,
+        img: images.slide9,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -260,7 +261,7 @@ const rolls = [
         id:2
     },
     {
-        img: images.slide1,
+        img: images.slide4,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -268,7 +269,7 @@ const rolls = [
         id:3
     },
     {
-        img: images.slide3,
+        img: images.slide5,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -276,7 +277,7 @@ const rolls = [
         id:4
     },
     {
-        img: images.slide1,
+        img: images.slide6,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -284,7 +285,7 @@ const rolls = [
         id:5
     },
     {
-        img: images.slide1,
+        img: images.slide7,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -303,7 +304,7 @@ const sets = [
         id:1
     },
     {   
-        img: images.slide3,
+        img: images.slide9,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -311,7 +312,7 @@ const sets = [
         id:2
     },
     {
-        img: images.slide1,
+        img: images.slide4,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -319,7 +320,7 @@ const sets = [
         id:3
     },
     {
-        img: images.slide3,
+        img: images.slide5,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -327,7 +328,7 @@ const sets = [
         id:4
     },
     {
-        img: images.slide1,
+        img: images.slide6,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -335,7 +336,7 @@ const sets = [
         id:5
     },
     {
-        img: images.slide1,
+        img: images.slide7,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -354,7 +355,7 @@ const drinks = [
         id:1
     },
     {   
-        img: images.slide3,
+        img: images.slide9,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -362,7 +363,7 @@ const drinks = [
         id:2
     },
     {
-        img: images.slide1,
+        img: images.slide4,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -370,7 +371,7 @@ const drinks = [
         id:3
     },
     {
-        img: images.slide3,
+        img: images.slide5,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -378,7 +379,7 @@ const drinks = [
         id:4
     },
     {
-        img: images.slide1,
+        img: images.slide6,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -386,7 +387,7 @@ const drinks = [
         id:5
     },
     {
-        img: images.slide1,
+        img: images.slide7,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -405,7 +406,7 @@ const chef = [
         id:1
     },
     {   
-        img: images.slide3,
+        img: images.slide9,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -413,7 +414,7 @@ const chef = [
         id:2
     },
     {
-        img: images.slide1,
+        img: images.slide4,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -421,7 +422,7 @@ const chef = [
         id:3
     },
     {
-        img: images.slide3,
+        img: images.slide5,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -429,7 +430,7 @@ const chef = [
         id:4
     },
     {
-        img: images.slide1,
+        img: images.slide6,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -437,7 +438,7 @@ const chef = [
         id:5
     },
     {
-        img: images.slide1,
+        img: images.slide7,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -455,7 +456,7 @@ const pizza = [
         id:1
     },
     {   
-        img: images.slide3,
+        img: images.slide9,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -463,7 +464,7 @@ const pizza = [
         id:2
     },
     {
-        img: images.slide1,
+        img: images.slide4,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -471,7 +472,7 @@ const pizza = [
         id:3
     },
     {
-        img: images.slide3,
+        img: images.slide5,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -479,7 +480,7 @@ const pizza = [
         id:4
     },
     {
-        img: images.slide1,
+        img: images.slide6,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -487,7 +488,7 @@ const pizza = [
         id:5
     },
     {
-        img: images.slide1,
+        img: images.slide7,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -523,6 +524,8 @@ const MenuCategoryPage = () => {
       ) : (
         <p style={{ textAlign: 'center', padding: '2rem' }}>Категорія не знайдена</p>
       )}
+
+      <About/>
       <Footer />
     </>
   );

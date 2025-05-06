@@ -10,7 +10,13 @@ import can from '../assets/icons/can-juice.svg'
 import instagram from '../assets/icons/instagram.svg'
 import facebook from '../assets/icons/facebook.svg'
 import slide1 from '../assets/images/sushi1.jpg'
-import slide3 from '../assets/images/sushi3.webp'
+import slide4 from '../assets/images/sushi4.jpg'
+import slide5 from '../assets/images/sushi5.jpg'
+import slide6 from '../assets/images/sushi6.jpg'
+import slide7 from '../assets/images/sushi7.jpg'
+import slide8 from '../assets/images/sushi8.jpg'
+import slide9 from '../assets/images/sushi9.jpg'
+import slide2 from '../assets/images/sushi2.jpg'
 import arrowNext from '../assets/icons/arrow-next.svg'
 import arrowPrev from '../assets/icons/arrow-prev.svg'
 
@@ -33,5 +39,12 @@ export const images = {
         arrowPrev
     },
     slide1,
-    slide3
+    slide2,
+    slide4,
+    slide5,
+    slide6,
+    slide7,
+    slide8,
+    slide9,
+
 }

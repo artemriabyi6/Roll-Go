@@ -5,16 +5,28 @@ import styles from "./mainSlider.module.scss";
 
 const slides = [
   {
-    img: images.slide1,
-    slideTitle: "slide title",
-    slideDescription: "slide description",
+    img: images.slide8,
+    // slideTitle: "slide title",
+    // slideDescription: "slide description",
     id: 1,
   },
   {
-    img: images.slide3,
-    slideTitle: "slide title",
-    slideDescription: "slide description",
+    img: images.slide9,
+    // slideTitle: "slide title",
+    // slideDescription: "slide description",
     id: 2,
+  },
+  {
+    img: images.slide4,
+    // slideTitle: "slide title",
+    // slideDescription: "slide description",
+    id: 3,
+  },
+  {
+    img: images.slide5,
+    // slideTitle: "slide title",
+    // slideDescription: "slide description",
+    id: 4,
   },
 ];
 
