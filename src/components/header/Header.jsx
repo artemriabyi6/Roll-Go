@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { images } from '../../utils/images';
 import styles from './header.module.scss';
-import NavItem from '../navItem/NavItem';
+import { useParams } from 'react-router-dom';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+
+    const { menuItem } = useParams()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,7 +23,9 @@ const Header = () => {
             <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
                 <div className={`container ${styles.container}`}>
                     <div className={styles.logoBlock}>
+                        <Link to='/'>
                         <img src={images.icons.logo} alt="logo" />
+                        </Link>
                     </div>
                     <div className={styles.otherBlock}>
                         <nav className={styles.navigation}>
@@ -61,14 +65,9 @@ const Header = () => {
                     </div>
                     </div>
                 </div>
-                <div className={`container ${styles.container}`}>
-                    <NavItem icon={images.icons.roll} text='Роли' />
-                    <NavItem icon={images.icons.set} text='Сети' />
-                    <NavItem icon={images.icons.geisha} text="З любов'ю від шефа" />
-                    <NavItem icon={images.icons.can} text='Напої' />
-                    <NavItem icon={images.icons.pizza} text='Піца' />
-                    <NavItem icon={images.icons.sale} text='Акції' />
-                </div>
+                <p className={styles.routeText}>
+                    {`Roll & go / ${menuItem}`}
+                </p>    
             </header>
         </>
     );

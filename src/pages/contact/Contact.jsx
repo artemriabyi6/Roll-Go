@@ -1,6 +1,13 @@
+import Header from "../../components/header/Header";
+import Footer from '../../components/footer/Footer'
+
+
 const ContactPage = () => {
     return ( 
-        <h1>Contact page</h1>
+       <>
+         <Header/>
+         <Footer/>
+       </>
      );
 }
  

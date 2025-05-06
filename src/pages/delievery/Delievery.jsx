@@ -1,6 +1,13 @@
+import Header from "../../components/header/Header";
+import Footer from '../../components/footer/Footer'
+
+
 const DelieveryPage = () => {
     return ( 
-        <h1>Delievery page</h1>
+       <>
+         <Header/>
+         <Footer/>
+       </>
      );
 }
  

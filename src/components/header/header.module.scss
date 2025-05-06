@@ -1,11 +1,10 @@
 .placeholder {
-  height: 470px; // або конкретна висота вашого хедера в звичайному стані
+  height: 200px; // або конкретна висота вашого хедера в звичайному стані
 }
 
 .header {
   width: 100%;
   background-color: #fff;
-  margin-bottom: 30px;
   transition: all 0.5s ease;
   z-index: 999;
   
@@ -22,9 +21,6 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
-  .link {
-    height: 120px;
-  }
 
 
   .container {
@@ -153,6 +149,11 @@
         left: 10px;
       }
     }
+  }
+
+  .routeText {
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
 

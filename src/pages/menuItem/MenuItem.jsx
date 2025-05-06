@@ -1,6 +1,16 @@
+import Header from "../../components/header/Header";
+import Footer from '../../components/footer/Footer'
+import MainSlider from '../../components/mainSlider/MainSlider'
+import SubHeader from "../../components/subHeader/SubHeader";
+
 const MenuItemPage = () => {
     return ( 
-        <h1>MenuItemPage</h1>
+        <>
+        <Header/>
+        <SubHeader/>
+        <MainSlider/>
+        <Footer/>
+        </>
     );
 }
  
