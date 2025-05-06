@@ -31,10 +31,10 @@ const Header = () => {
                         <nav className={styles.navigation}>
                             <ul>
                                 <li>
-                                    <Link to='/сети' className={styles.menuItem}>Меню</Link>
+                                    <Link to='/set' className={styles.menuItem}>Меню</Link>
                                 </li>
                                 <li>
-                                    <Link to='/акції' className={`${styles.menuItem} ${styles.specialItem}`}>Акції</Link>
+                                    <Link to='/special' className={`${styles.menuItem} ${styles.specialItem}`}>Акції</Link>
                                 </li>
                                 <li>
                                     <Link to='/delievery' className={styles.menuItem}>Доставка/Оплата</Link>
@@ -65,9 +65,14 @@ const Header = () => {
                     </div>
                     </div>
                 </div>
-                <p className={styles.routeText}>
-                    {`Roll & go / ${menuItem}`}
-                </p>    
+
+                {menuItem !== undefined ? (
+                      <p className={styles.routeText}>
+                      {`Roll & go / ${menuItem}`}
+                  </p>    
+                ): null 
+                }
+              
             </header>
         </>
     );

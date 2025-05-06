@@ -28,12 +28,12 @@ const SubHeader = () => {
 
 
   const navItems = [
-    { icon: images.icons.roll, text: 'Роли' },
-    { icon: images.icons.set, text: 'Сети' },
-    { icon: images.icons.geisha, text: "З любов'ю від шефа" },
-    { icon: images.icons.can, text: 'Напої' },
-    { icon: images.icons.pizza, text: 'Піца' },
-    { icon: images.icons.sale, text: 'Акції' },
+    { icon: images.icons.roll, text: 'roll' },
+    { icon: images.icons.set, text: 'set' },
+    { icon: images.icons.geisha, text: "chef" },
+    { icon: images.icons.can, text: 'drinks' },
+    { icon: images.icons.pizza, text: 'pizza' },
+    { icon: images.icons.sale, text: 'special' },
   ];
 
   const normalize = str => str
@@ -49,9 +49,6 @@ const SubHeader = () => {
     <div className={`container ${styles.container}`}>
       {navItems.map(({ icon, text }) => {
         const normalized = normalize(text);
-
-        console.log('PATH:', currentPath, '| NORMALIZED:', `/${normalized}`);
-
 
         const isActive = currentPath === `/${normalized}`;
         return (
