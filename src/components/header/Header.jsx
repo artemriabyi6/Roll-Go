@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { images } from '../../utils/images';
 import styles from './header.module.scss';
 import { useParams } from 'react-router-dom';
+import Cart from '../cart/Cart';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -44,6 +45,7 @@ const Header = () => {
                                 </li>
                             </ul>
                         </nav>
+                        <Cart img={images.icons.bag}/>
                         <div className={styles.adressBlock}>
                         <div className={styles.adressBlockFirstRow}>
                             <div className={styles.adressBlockFirstRowIconBox}>

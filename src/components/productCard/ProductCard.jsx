@@ -1,8 +1,24 @@
 import styles from './productCard.module.scss'
+import { useCart } from '../../context/CartContext';
 
-const ProductCard = ({ img, weight, desc, composition, price }) => {
+const ProductCard = ({ img, weight, desc, composition, price, id }) => {
+
+    const { addToCart, cart } = useCart();
+
+    const handleAddToCart = () => {
+        
+        addToCart({
+            id,
+            img,
+            weight,
+            desc,
+            composition,
+            price,
+        });
+    };
+
     return ( 
-        <div className={styles.productWrapper}>
+        <div className={styles.productWrapper} key={id}>
                 <div className={styles.imgBox}>
                     <img src={img} alt="" />
                     <p className={styles.price}>{price} грн</p>
@@ -12,7 +28,7 @@ const ProductCard = ({ img, weight, desc, composition, price }) => {
                     <h2 className={styles.desc}>{desc}</h2>
                     <p className={styles.composition}>{composition}</p>
                 </div>
-                <button className={styles.buyBtn}>Замовити</button>
+                <button className={styles.buyBtn} onClick={handleAddToCart}>Замовити</button>
         </div>
      );
 }

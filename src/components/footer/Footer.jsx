@@ -44,7 +44,7 @@ const Footer = () => {
                         <p>Політика конфіденційності</p>
                     </div>
                     <div className={styles.secondRow}>
-                        <p>KaiFui © 2025</p>
+                        <p>Roll & go © 2025</p>
                     </div>
                 </div>
             </div>

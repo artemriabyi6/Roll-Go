@@ -1,0 +1,26 @@
+.infoWrapper {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    .infoBlock {
+        .mainText {
+            font-size: 20px;
+            color: #531347;
+            font-weight: 700;
+        }
+        .text {
+            font-size: 18px;
+        }
+    }
+}
+
+.mapWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    max-width: 100%;
+    iframe {
+      width: 95%;
+      border-radius: 8px;
+    }
+  }

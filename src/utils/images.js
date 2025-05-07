@@ -19,7 +19,7 @@ import slide9 from '../assets/images/sushi9.jpg'
 import slide2 from '../assets/images/sushi2.jpg'
 import arrowNext from '../assets/icons/arrow-next.svg'
 import arrowPrev from '../assets/icons/arrow-prev.svg'
-
+import bag from '../assets/icons/paper-bag-cart.svg'
 
 
 export const images = {
@@ -36,7 +36,8 @@ export const images = {
         instagram,
         facebook,
         arrowNext,
-        arrowPrev
+        arrowPrev,
+        bag
     },
     slide1,
     slide2,

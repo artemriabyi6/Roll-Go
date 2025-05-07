@@ -11,7 +11,7 @@ import HomePage from './pages/home/HomePage.jsx'
 import ContactPage from './pages/contact/Contact.jsx'
 import DelieveryPage from './pages/delievery/Delievery.jsx'
 import MenuItemPage from './pages/menuItem/MenuItem.jsx'
-
+import { CartProvider } from './context/CartContext.jsx';
 import './styles/global.scss';
 
 const router = createBrowserRouter(
@@ -23,15 +23,14 @@ const router = createBrowserRouter(
       <Route path="/:menuItem" element={<MenuItemPage />} />
     </>
   ),
-  // {
-  //   basename: '/Victoria'
-  // }
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <CartProvider>
     <RouterProvider router={router}>
-      <App />
+    <App />
     </RouterProvider>
+    </CartProvider>
   </React.StrictMode>,
 )
