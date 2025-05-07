@@ -10,17 +10,17 @@ const Header = () => {
 
     const { menuItem } = useParams()
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 150);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsScrolled(window.scrollY > 150);
+    //     };
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // }, []);
 
     return (
         <>
-            <div className={isScrolled ? styles.placeholder : ''}></div>
+            <div className={isScrolled ? styles.placeholder : styles.placeholder}></div>
             <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
                 <div className={`container ${styles.container}`}>
                     <div className={styles.logoBlock}>

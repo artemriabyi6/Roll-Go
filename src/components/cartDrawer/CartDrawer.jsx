@@ -1,4 +1,3 @@
-// components/CartDrawer.jsx
 import  { useEffect } from 'react';
 import styles from './cartDrawer.module.scss';
 import { useCart } from '../../context/CartContext';
@@ -16,6 +15,19 @@ const CartDrawer = ({ isOpen, onClose }) => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [onClose]);
+
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <>
