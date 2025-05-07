@@ -68,9 +68,16 @@ const CartDrawer = ({ isOpen, onClose }) => {
         )}
 
         {cart.length !== 0 ? (
+          <>
            <div className={styles.totalPrice}>
-           <h6>{totalPrice} грн</h6>
+           <h6>Cумма: {totalPrice} грн</h6>
          </div>
+
+         <button className={styles.confirmOrder}>
+            Оформити замовлення
+         </button>
+          </>
+          
         ): null}
        
       </div>

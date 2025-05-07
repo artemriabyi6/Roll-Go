@@ -522,7 +522,7 @@ const MenuCategoryPage = () => {
       {selected ? (
         <ProductsSection products={selected.data} title={selected.title} />
       ) : (
-        <p style={{ textAlign: 'center', padding: '2rem' }}>Категорія не знайдена</p>
+       null
       )}
 
       <About/>

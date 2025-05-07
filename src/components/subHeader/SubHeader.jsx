@@ -28,12 +28,12 @@ const SubHeader = () => {
 
 
   const navItems = [
-    { icon: images.icons.roll, text: 'roll' },
-    { icon: images.icons.set, text: 'set' },
-    { icon: images.icons.geisha, text: "chef" },
-    { icon: images.icons.can, text: 'drinks' },
-    { icon: images.icons.pizza, text: 'pizza' },
-    { icon: images.icons.sale, text: 'special' },
+    { icon: images.icons.roll, text: 'Роли', route: 'roll' },
+    { icon: images.icons.set, text: 'Сети', route: 'set' },
+    { icon: images.icons.geisha, text: "Від Шефа", route: 'chef' },
+    { icon: images.icons.can, text: 'Напої', route: 'drinks' },
+    { icon: images.icons.pizza, text: 'Піца', route: 'pizza' },
+    { icon: images.icons.sale, text: 'Акції', route: 'special' },
   ];
 
   const normalize = str => str
@@ -47,13 +47,13 @@ const SubHeader = () => {
 
   return (
     <div className={`container ${styles.container}`}>
-      {navItems.map(({ icon, text }) => {
-        const normalized = normalize(text);
+      {navItems.map(({ icon, route, text }) => {
+        const normalized = normalize(route);
 
         const isActive = currentPath === `/${normalized}`;
         return (
           <NavItem
-            key={text}
+            key={route}
             icon={icon}
             text={text}
             isActive={isActive}
