@@ -1,0 +1,132 @@
+.drawer {
+    position: fixed;
+   top: 0;
+  left: -400px;
+  width: 50%;
+  height: calc(100vh);
+  background: #fff;
+  z-index: 10000;
+  transition: 0.3s ease;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+
+  &.open {
+    left: 0;
+  }
+  .closeBtn {
+    width: 50px;
+    height: 50px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+  }
+
+  .adressBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #53132c;
+    .adressBlockFirstRow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+
+      .adressBlockFirstRowIconBox {
+        width: 30px;
+        height: 30px;
+      }
+
+      .adressBlockFirstRowText {
+        font-weight: 700;
+        font-size: 22px;
+        color: #53132c;
+      }
+    }
+
+    .adressBlockSecondRowText {
+      font-size: 14px;
+      position: relative;
+      left: 5px;
+    }
+  }
+
+  .contactBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #53132c;
+
+    .contactBlockFirstRow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .contactBlockFirstRowIconBox {
+        width: 40px;
+        height: 40px;
+      }
+
+      .contactBlockFirstRowText {
+        font-weight: 700;
+        font-size: 22px;
+        color: #53132c;
+      }
+    }
+
+    .contactBlockSecondRowText {
+      font-size: 14px;
+      position: relative;
+      left: 10px;
+    }
+  }
+
+  .navItemsBlock {
+    list-style: inherit;
+    padding: 17px;
+    .navItem {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  
+    &.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .drawer {
+      position: fixed;
+     top: 0;
+    left: -400px;
+    width: 80%;
+    height: calc(100vh);
+    background: #fff;
+    z-index: 10000;
+    transition:  0.3s ease;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  
+    &.open {
+      left: 0;
+    }
+  }
+}

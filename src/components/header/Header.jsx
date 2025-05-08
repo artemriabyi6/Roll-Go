@@ -1,27 +1,26 @@
-import { useEffect, useState } from 'react';
+import {useMediaQuery} from 'react-responsive'
 import { Link } from 'react-router-dom';
 import { images } from '../../utils/images';
 import styles from './header.module.scss';
 import { useParams } from 'react-router-dom';
 import Cart from '../cart/Cart';
+import MobileHeader from '../../mobile components/mobileHeader/MobileHeader';
 
 const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
 
+    const isMobile = useMediaQuery({maxWidth: 767})
+   
     const { menuItem } = useParams()
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 150);
-    //     };
-    //     window.addEventListener('scroll', handleScroll);
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
+  
 
     return (
         <>
-            <div className={isScrolled ? styles.placeholder : styles.placeholder}></div>
-            <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+            <div className={styles.placeholder}></div>
+            {isMobile ? (
+                <MobileHeader/>
+            ): (
+                <header className={styles.header}>
                 <div className={`container ${styles.container}`}>
                     <div className={styles.logoBlock}>
                         <Link to='/'>
@@ -74,8 +73,9 @@ const Header = () => {
                   </p>    
                 ): null 
                 }
-              
             </header>
+            )}
+           
         </>
     );
 };

@@ -125,3 +125,99 @@
 
     }
   }
+
+  @media (max-width: 767px) {
+    .drawer {
+      position: fixed;
+    top: 0;
+    right: -800px;
+    width: 60%;
+    height: calc(100vh);
+    background: #fff;
+    z-index: 10000;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  
+    &.open {
+      right: 0;
+    }
+      .item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        &:first-child {
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+        }
+        .itemWrapper {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+         
+          .imgQuantity {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .imgBox {
+              width: 120px;
+              height: 75px;
+              margin-bottom: 15px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+  
+          .descPrice {
+            .desc {
+              font-size: 15px;
+              line-height: 1.1;
+              text-align: center;
+            }
+            .price {
+              position: absolute;
+              right: 5px;
+              bottom: 5px;
+            }
+          }
+  
+        }
+    
+        .quantity {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+    
+          button {
+            padding: 3px 7px;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .drawer {
+      position: fixed;
+     top: 0;
+    right: -800px;
+    width: 80%;
+    height: calc(100vh);
+    background: #fff;
+    z-index: 10000;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  
+    &.open {
+      right: 0;
+    }
+  }
+}

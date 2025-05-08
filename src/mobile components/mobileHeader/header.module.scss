@@ -1,0 +1,80 @@
+.header {
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.5s ease;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0px;
+    }
+  
+    .logoBlock {
+      width: 120px;
+      height: 120px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      left: -26px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  
+    
+  
+    
+  
+    .otherBlock {
+      display: flex;
+      align-items: center;
+  
+  
+      .adressBlock {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 20px 0px 20px;
+  
+        .adressBlockFirstRow {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 5px;
+  
+          .adressBlockFirstRowIconBox {
+            width: 30px;
+            height: 30px;
+          }
+  
+          .adressBlockFirstRowText {
+            font-weight: 700;
+            font-size: 22px;
+            color: #53132c;
+          }
+        }
+  
+        .adressBlockSecondRowText {
+          font-size: 14px;
+          position: relative;
+          left: 5px;
+        }
+      }
+  
+     
+    }
+  
+    .routeText {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }

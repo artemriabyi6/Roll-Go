@@ -21,3 +21,9 @@
       height: 100%;
     }
   }
+
+  @media (max-width: 767px) {
+    .cartBlock {
+      margin-left: 0;
+    }
+  }
