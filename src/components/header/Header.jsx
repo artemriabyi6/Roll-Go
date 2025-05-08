@@ -16,10 +16,12 @@ const Header = () => {
 
     return (
         <>
-            <div className={styles.placeholder}></div>
+        
             {isMobile ? (
                 <MobileHeader/>
             ): (
+                <>
+                <div className={styles.placeholder}></div>
                 <header className={styles.header}>
                 <div className={`container ${styles.container}`}>
                     <div className={styles.logoBlock}>
@@ -73,7 +75,8 @@ const Header = () => {
                   </p>    
                 ): null 
                 }
-            </header>
+                </header>
+                </>
             )}
            
         </>

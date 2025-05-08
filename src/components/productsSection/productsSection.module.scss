@@ -9,3 +9,10 @@
     gap: 10px;
     margin-bottom: 50px;
 }
+
+@media (max-width: 767px) {
+    .productsWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

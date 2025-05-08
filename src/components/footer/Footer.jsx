@@ -1,8 +1,18 @@
+import {useMediaQuery} from 'react-responsive'
 import styles from './footer.module.scss'
 import { images } from '../../utils/images';
+import MobileFooter from '../../mobile components/mobileFooter/MobileFooter';
+
 const Footer = () => {
+
+    const isMobile = useMediaQuery({maxWidth: 767})
+
     return ( 
-        <footer>
+        <>
+           {isMobile ? (
+             <MobileFooter/>
+        ) : (
+            <footer>
             <div className={`container ${styles.container}`}>
                 <div className={styles.firstRow}>
 
@@ -49,6 +59,10 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+        )} 
+        </>
+     
+       
      );
 }
  

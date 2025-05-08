@@ -85,3 +85,12 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    .productWrapper {
+        width: 90%;
+        .imgBox {
+            width: 90%;
+        }
+    }
+}
