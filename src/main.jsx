@@ -23,6 +23,9 @@ const router = createBrowserRouter(
       <Route path="/:menuItem" element={<MenuItemPage />} />
     </>
   ),
+  {
+    basename: '/Roll-Go'
+  }
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
