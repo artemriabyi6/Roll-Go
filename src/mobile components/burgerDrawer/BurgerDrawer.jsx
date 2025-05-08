@@ -88,16 +88,16 @@ const BurgerDrawer = ({
       <div className={styles.menuItemsBlock}>
         {
           menuItems.map((item, index) => (
-              <MobMenuItems key={index} text={item.text} img={item.img} path={item.path}/>
+              <MobMenuItems key={index} text={item.text} img={item.img} path={item.path} onClose={onClose}/>
           ))
         }
       </div>
 
       <ul className={styles.navItemsBlock}>
-          <li className={styles.navItem}><Link to='/set'>Меню</Link></li>
-          <li className={styles.navItem}><Link to='/special'>Акції</Link></li>
-          <li className={styles.navItem}><Link to='/delievery'>Доставка/Оплата</Link></li>
-          <li className={styles.navItem}><Link to='/contact'>Контакти</Link></li>
+          <li className={styles.navItem}><Link to='/set' onClick={onClose}>Меню</Link></li>
+          <li className={styles.navItem}><Link to='/special' onClick={onClose}>Акції</Link></li>
+          <li className={styles.navItem}><Link to='/delievery' onClick={onClose}>Доставка/Оплата</Link></li>
+          <li className={styles.navItem}><Link to='/contact' onClick={onClose}>Контакти</Link></li>
         </ul> 
         </div>
     
