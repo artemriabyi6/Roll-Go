@@ -13,6 +13,7 @@ import DelieveryPage from './pages/delievery/Delievery.jsx'
 import MenuItemPage from './pages/menuItem/MenuItem.jsx'
 import { CartProvider } from './context/CartContext.jsx';
 import './styles/global.scss';
+import OrderPage from './pages/order/OrderPage.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,8 @@ const router = createBrowserRouter(
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/delievery" element={<DelieveryPage />} />
       <Route path="/:menuItem" element={<MenuItemPage />} />
+      <Route path="/order" element={<OrderPage />} />
+
     </>
   ),
   {

@@ -1,0 +1,10 @@
+.mapWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 40px 0px;
+    max-width: 100%;
+    iframe {
+      width: 95%;
+      border-radius: 8px;
+    }
+  }

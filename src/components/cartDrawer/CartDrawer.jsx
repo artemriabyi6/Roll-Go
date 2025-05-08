@@ -1,6 +1,7 @@
 import  { useEffect } from 'react';
 import styles from './cartDrawer.module.scss';
 import { useCart } from '../../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const CartDrawer = ({ isOpen, onClose }) => {
   const { cart, incrementQuantity, decrementQuantity, removeFromCart, totalPrice } = useCart();
@@ -74,7 +75,9 @@ const CartDrawer = ({ isOpen, onClose }) => {
          </div>
 
          <button className={styles.confirmOrder}>
-            Оформити замовлення
+          <Link to='/order'>
+          Оформити замовлення
+          </Link>
          </button>
           </>
           
