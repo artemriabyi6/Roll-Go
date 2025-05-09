@@ -27,6 +27,26 @@ import drink2 from '../assets/images/drink2.jpg'
 import drink3 from '../assets/images/drink3.jpg'
 import drink4 from '../assets/images/drink4.jpg'
 import drink5 from '../assets/images/drink5.jpg'
+import roll1 from '../assets/images/roll1.jpg'
+import roll2 from '../assets/images/roll2.jpg'
+import roll3 from '../assets/images/roll3.jpg'
+import roll4 from '../assets/images/roll4.jpg'
+import roll5 from '../assets/images/roll5.jpg'
+import roll6 from '../assets/images/roll6.jpg'
+import pizza1 from '../assets/images/pizza1.jpg'
+import pizza2 from '../assets/images/pizza2.jpg'
+import pizza3 from '../assets/images/pizza3.jpg'
+import pizza4 from '../assets/images/pizza4.jpg'
+import pizza5 from '../assets/images/pizza5.jpg'
+import pizza6 from '../assets/images/pizza6.jpg'
+import chef1 from '../assets/images/chef1.jpg'
+import chef2 from '../assets/images/chef2.jpg'
+import chef3 from '../assets/images/chef3.jpg'
+import chef4 from '../assets/images/chef4.jpg'
+import chef5 from '../assets/images/chef5.jpg'
+import chef6 from '../assets/images/chef6.jpg'
+import chef7 from '../assets/images/chef7.jpg'
+
 
 
 
@@ -64,5 +84,23 @@ export const images = {
     drink3,
     drink4,
     drink5,
-
+    chef1,
+    chef2,
+    chef3,
+    chef4,
+    chef5,
+    chef6,
+    chef7,
+    roll1,
+    roll2,
+    roll3,
+    roll4,
+    roll5,
+    roll6,
+    pizza1,
+    pizza2,
+    pizza3,
+    pizza4,
+    pizza6,
+    pizza5,
 }
