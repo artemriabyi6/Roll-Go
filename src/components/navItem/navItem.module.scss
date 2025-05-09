@@ -1,6 +1,7 @@
 
 .link {
     width: 16.5%;
+    flex-shrink: 0;
     height: 150px;
     gap: 20px;
     background-color: #53132c;
@@ -31,5 +32,11 @@
         color: white;
         font-size: 22px;
         font-weight: 700;
+    }
+}
+
+@media (max-width: 767px) {
+    .link {
+        width: 220px;
     }
 }

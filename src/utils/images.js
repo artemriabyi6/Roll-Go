@@ -22,6 +22,13 @@ import arrowPrev from '../assets/icons/arrow-prev.svg'
 import bag from '../assets/icons/paper-bag-cart.svg'
 import burger from '../assets/icons/burger.svg'
 import cross from '../assets/icons/cross.svg'
+import drink1 from '../assets/images/drink1.jpg'
+import drink2 from '../assets/images/drink2.jpg'
+import drink3 from '../assets/images/drink3.jpg'
+import drink4 from '../assets/images/drink4.jpg'
+import drink5 from '../assets/images/drink5.jpg'
+
+
 
 
 export const images = {
@@ -52,5 +59,10 @@ export const images = {
     slide7,
     slide8,
     slide9,
+    drink1,
+    drink2,
+    drink3,
+    drink4,
+    drink5,
 
 }

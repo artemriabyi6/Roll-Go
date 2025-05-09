@@ -112,7 +112,7 @@ const sets = [
 
 const drinks = [
     {   
-        img: images.slide1,
+        img: images.drink1,
         weight: 270,
         desc: 'Запечений рол з вугром',
         composition: 'Склад: рис, норі, вугор, крем-сир, японський омлет, сирний мікс, соус Унагі.',
@@ -120,7 +120,7 @@ const drinks = [
         id:1
     },
     {   
-        img: images.slide9,
+        img: images.drink2,
         weight: 260,
         desc: 'Запечений рол з лососем та сиром чеддер',
         composition: 'Склад: рис, норі, лосось, крем-сир, японський омлет, сирний мікс, соус унагі, кунжут.',
@@ -128,7 +128,7 @@ const drinks = [
         id:2
     },
     {
-        img: images.slide4,
+        img: images.drink3,
         weight: 280,
         desc: 'Запечений рол з креветкою',
         composition: 'Склад: рис, норі, креветка, крем-сир, японський омлет, сирний мікс, ікра тобіко, соус солодкий чилі.',
@@ -136,7 +136,7 @@ const drinks = [
         id:3
     },
     {
-        img: images.slide5,
+        img: images.drink4,
         weight: 260,
         desc: 'Запечений рол з лососем',
         composition: 'Склад: рис, норі, лосось, крем-сир, крабовий мікс, японський омлет, сирний мікс, соус Унагі, кунжут.',
@@ -144,7 +144,7 @@ const drinks = [
         id:4
     },
     {
-        img: images.slide6,
+        img: images.drink5,
         weight: 280,
         desc: 'Запечений рол з тунцем та соусом солодкий чилі',
         composition: 'Склад: рис, норі, тунець, крем-сир, японський омлет, сирний мікс, солодкий чилі, нитки чилі. (пікантний).',
@@ -152,7 +152,7 @@ const drinks = [
         id:5
     },
     {
-        img: images.slide7,
+        img: images.drink2,
         weight: 540,
         desc: 'Запечений з креветкою + Запечений з лососем + Coca-Cola 0,5 у подарунок',
         composition: 'Склад: Запечений рол з креветкою, Запечений рол з лососем і сиром чеддер, Coca-Cola 0,5.',
@@ -282,6 +282,7 @@ const MenuCategoryPage = () => {
       {isMobile ? (
         <>
          <Header />
+          <SubHeader />
         {
         menuItem !== 'special' ?  <MainSlider /> : null
         }
