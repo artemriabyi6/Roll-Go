@@ -289,7 +289,7 @@ const MenuCategoryPage = () => {
     <>
       {isMobile ? (
         <>
-         <Header />
+            <Header />
           <SubHeader />
         {
         menuItem !== 'special' ?  <MainSlider /> : null
