@@ -63,7 +63,7 @@ const MainSlider = () => {
               index === activeIndex ? styles.active : ""
             }`}
           >
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="" loading="lazy" />
             <p className={styles.slideTitle}>{item.slideTitle}</p>
             <p className={styles.slideDescription}>{item.slideDescription}</p>
           </div>
@@ -86,7 +86,7 @@ const MainSlider = () => {
           startAutoSlide();
         }}
       >
-        <img src={images.icons.arrowNext} alt="" />
+        <img src={images.icons.arrowNext} alt="" loading="lazy" />
       </button>
 
       <div className={styles.dotsWrapper}>

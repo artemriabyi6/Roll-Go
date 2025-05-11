@@ -7,7 +7,7 @@ const MobMenuItems = ({ text, img, path, onClose}) => {
         <Link to={path} onClick={onClose}>
         <div className={styles.itemBlock}>
             <div className={styles.imgBlock}>
-                    <img src={img} alt="" />
+                    <img src={img} alt="" loading='lazy'/>
             </div>
             <p className={styles.text}>{text}</p>
         </div>

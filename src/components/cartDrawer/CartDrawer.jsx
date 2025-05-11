@@ -45,7 +45,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                 <div className={styles.itemWrapper}>
                   <div className={styles.imgQuantity}>
                    <div className={styles.imgBox}>
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="" loading='lazy' />
                     </div> 
                   <div className={styles.quantity}>
                   <button onClick={() => decrementQuantity(item.id)}>-</button>

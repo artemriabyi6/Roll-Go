@@ -20,7 +20,7 @@ const ProductCard = ({ img, weight, desc, composition, price, id }) => {
     return ( 
         <div className={styles.productWrapper} key={id}>
                 <div className={styles.imgBox}>
-                    <img src={img} alt="" />
+                    <img src={img} alt="" loading='lazy'/>
                     <p className={styles.price}>{price} грн</p>
                 </div>
                 <div className={styles.descBlock}>
