@@ -8,3 +8,101 @@
       border-radius: 8px;
     }
   }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    .orderInfoBlock {
+      input {
+        display: block;
+        padding: 5px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+      }
+    }
+    .cartInfo {
+      ul {
+        .cartItem {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 15px;
+          &:first-child {
+            margin-top: 40px;
+          }
+          &:last-child {
+            margin-bottom: 40px;
+          }
+        }
+      }
+      .totalPrice {
+        font-size: 22px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+   
+  }
+   .confirmOrder {
+      background-color: #53132c;
+      color: white;
+      transition: 0.3s ease;
+      cursor: pointer;
+     display: block;
+     margin: auto;
+      padding: 10px 15px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      &:hover {
+        background-color: #832c4ce1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        .cartInfo {
+          order: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          ul {
+             .cartItem {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 10px;
+          &:first-child {
+            margin-top: 15px;
+          }
+          &:last-child {
+            margin-bottom: 15px;
+          }
+        }
+          }
+           .totalPrice {
+        font-size: 22px;
+        font-weight: 700;
+        text-decoration: underline;
+        margin-bottom: 30px;
+      }
+        }
+        .orderInfoBlock {
+          order: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+      .confirmOrder {
+     margin-bottom: 20px;
+    }
+    }
